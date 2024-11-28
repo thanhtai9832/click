@@ -1,1 +1,30 @@
-mongodb+srv://0332708028tai:A0332708028a)@cluster0.fr7ad.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        // Lấy giá trị room_id từ URL tham số
+        const urlParams = new URLSearchParams(window.location.search);
+        const room_id = urlParams.get('room_id'); // room_id là tham số trong URL
+
+        // Nếu không có room_id trong URL, chuyển hướng đến một trang mặc định
+        if (room_id) {
+            window.location.href = `https://tiktok.com/share/live/${room_id}`;
+        } else {
+            // Nếu không có room_id, hiển thị thông báo lỗi
+            window.location.href = "https://default-link.com"; // Trang mặc định nếu không có room_id
+        }
+    </script>
+    <title>Chuyển hướng...</title>
+</head>
+<body>
+    <p>Đang chuyển hướng bạn đến TikTok...</p>
+    <p>Nếu không tự động, vui lòng <a href="" id="manual-link">click vào đây</a>.</p>
+    
+    <script type="text/javascript">
+        // Nếu không tự động chuyển hướng, cập nhật liên kết "click vào đây" cho người dùng
+        document.getElementById('manual-link').href = `https://tiktok.com/share/live/${room_id}`;
+    </script>
+</body>
+</html>
